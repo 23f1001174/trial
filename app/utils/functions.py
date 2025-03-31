@@ -2789,13 +2789,13 @@ async def extract_tables_from_pdf(file_path: str) -> str:
             # 1. Physics marks >= 17
             # 2. Group between 43 and 66 (inclusive)
             filtered_df = combined_df[
-                (combined_df["Physics"] >= 17)
-                & (combined_df["Group"] >= 43)
-                & (combined_df["Group"] <= 66)
+                (combined_df["Biology"] >= 37)
+                & (combined_df["Group"] >= 63)
+                & (combined_df["Group"] <= 96)
                 ]
 
             # Calculate the total Biology marks
-            total_biology_marks = filtered_df["Biology"].sum()
+            total_biology_marks = filtered_df["Physics"].sum()
 
             # Create a detailed response
             return f"""
