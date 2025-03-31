@@ -1521,7 +1521,7 @@ async def generate_structured_output(prompt: str, structure_type: str) -> str:
                                     "city": {"type": "string"},
                                     "apartment": {"type": "string"},
                                 },
-                                "required": ["latitude", "city", "apartment"],
+                                "required": ["apartment", "country", "latitude"],
                             },
                         }
                     },
@@ -1645,7 +1645,7 @@ The total number of ducks across all players on page {page_number} is: **{total_
 
 
 async def get_imdb_movies(
-        min_rating: float = 7.0, max_rating: float = 8.0, limit: int = 25
+        min_rating: float = 6.0, max_rating: float = 8.0, limit: int = 25
 ) -> str:
     """
     Get movie information from IMDb with ratings in a specific range
