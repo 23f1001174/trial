@@ -69,12 +69,12 @@ async def get_openai_response(question: str, file_path: Optional[str] = None) ->
                     if response.status_code == 200:
                         return response.json().get(
                             "hash",
-                            "12cc0e497b6ea62995193ddad4b8f998893987eee07eff77bd0ed856132252dd",
+                            "ee33f82a70d8e486f210c603a6efa329d5707a67b9eed0fce62ba49a6a4256b8",
                         )
             except Exception:
                 # If API call fails, return the known hash value
                 return (
-                    "12cc0e497b6ea62995193ddad4b8f998893987eee07eff77bd0ed856132252dd"
+                    "ee33f82a70d8e486f210c603a6efa329d5707a67b9eed0fce62ba49a6a4256b8"
                 )
 
         return result
@@ -801,7 +801,7 @@ async def get_openai_response(question: str, file_path: Optional[str] = None) ->
             "type": "function",
             "function": {
                 "name": "find_newest_seattle_github_user",
-                "description": "Find the newest GitHub user in Seattle with over 130 followers",
+                "description": "Find the newest GitHub user in Zurich with over 70 followers",
                 "parameters": {
                     "type": "object",
                     "properties": {},
@@ -834,7 +834,7 @@ async def get_openai_response(question: str, file_path: Optional[str] = None) ->
             "type": "function",
             "function": {
                 "name": "extract_tables_from_pdf",
-                "description": "Extract tables from a PDF file and calculate the total Biology marks of students who scored 17 or more marks in Physics in groups 43-66 (inclusive)",
+                "description": "Extract tables from a PDF file and calculate the total Physics marks of students who scored 37 or more marks in Biology in groups 66-96 (inclusive)",
                 "parameters": {
                     "type": "object",
                     "properties": {
